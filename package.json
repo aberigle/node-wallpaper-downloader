@@ -1,0 +1,15 @@
+{
+  "name": "node-wallpaper-downloader",
+  "version": "1.0.0",
+  "description": "download bing image of the day ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aberigle",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "request": "^2.69.0"
+  }
+}
