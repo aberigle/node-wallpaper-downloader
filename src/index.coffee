@@ -35,9 +35,10 @@ mkdir = (url) -> new Promise (resolve) ->
 dest = path.resolve process.argv[2]
 
 rmdir(dest)
-.then -> request 'https://image-a-day.herokuapp.com/image', (error, response, body) ->
+.then -> request 'https://dry-plateau-3558.herokuapp.com/image', (error, response, body) ->
   if not error and response.statusCode is 200
-    {imageUrl} = JSON.parse(body)
+    image = JSON.parse(body).images[0]
+    imageUrl = "https://bing.com/" + image.url
     console.log imageUrl
     downloadImage imageUrl, dest + '/' + path.basename(imageUrl), ->
-        console.log 'done'
+      console.log 'done'
