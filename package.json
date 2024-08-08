@@ -4,12 +4,15 @@
   "description": "download bing image of the day ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "bun build --minify --compile src/index.ts --outfile bin/downloader"
   },
   "author": "aberigle",
   "license": "MIT",
-  "dependencies": {
-    "coffee-script": "^1.10.0",
-    "request": "^2.69.0"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "^1.1.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
